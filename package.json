@@ -1,0 +1,23 @@
+{
+  "name": "rxjs-init",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "poi",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Uheinanba/rxjs-init.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Uheinanba/rxjs-init/issues"
+  },
+  "homepage": "https://github.com/Uheinanba/rxjs-init#readme",
+  "devDependencies": {
+    "poi": "^9.6.8"
+  }
+}
