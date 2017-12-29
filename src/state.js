@@ -30,7 +30,8 @@ const reducer = (state, action) => {
 // Reduxification
 const store$ = action$  
     .startWith(initState)
-    .scan(reducer);
+    .scan(reducer)
+    .distinctUntilChanged()
 
 // Higher order function to send actions to the stream
 const dispatch = (func) => (...args) => {
@@ -51,6 +52,7 @@ button.addEventListener('click', (evt) => {
 })
 
 store$.subscribe(data => {
+  console.log(data);
   if(data.name !== "") {
     title.innerHTML = "Hello " + data.name;
   } else {
