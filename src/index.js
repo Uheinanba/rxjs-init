@@ -1,1 +1,1 @@
-console.log(23434)
+import './state.js';
