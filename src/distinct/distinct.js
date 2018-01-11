@@ -8,12 +8,12 @@ const button = document.getElementById("changename");
     <input id="name" type="text" />
  */
 
-const action$ = new Rx.Subject();
+const action$ = new Rx.ReplaySubject(0);
 button.addEventListener('click', (evt) => {
     action$.next({
         value: document.getElementById("name").value
     })
 })
-var example = action$.distinct((x) => {
-    return x.value
+var example = action$.distinctUntilChanged((p, q) => {
+    return p.value === q.value;
 }).subscribe(x => console.log(x))

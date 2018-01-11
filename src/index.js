@@ -1,1 +1,1 @@
-import './distinct.js';
+import './distinct/distinct.js';
